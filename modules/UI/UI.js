@@ -216,13 +216,6 @@ UI.notifyConferenceDestroyed = function (reason) {
 };
 
 /**
- * Notify user that Jitsi Videobridge is not accessible.
- */
- UI.notifyBridgeDown = function () {
-    messageHandler.showError("dialog.error", "dialog.bridgeUnavailable");
-};
-
-/**
  * Show chat error.
  * @param err the Error
  * @param msg
@@ -1128,14 +1121,15 @@ UI.notifyFocusDisconnected = function (focus, retrySec) {
 };
 
 /**
- * Notify user that focus left the conference so page should be reloaded.
+ * Notify the user that the video conferencing service is badly broken and
+ * the page should be reloaded.
  */
-UI.notifyFocusLeft = function () {
+UI.notifyVideoConferencingNotAvailable = function () {
     let title = APP.translation.generateTranslationHTML(
         'dialog.serviceUnavailable'
     );
     let msg = APP.translation.generateTranslationHTML(
-        'dialog.jicofoUnavailable'
+        'dialog.serviceUnavailableMsg'
     );
     messageHandler.openDialog(
         title,
