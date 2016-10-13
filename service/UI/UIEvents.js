@@ -118,7 +118,7 @@ export default {
      * Notifies that the avatar is displayed or not on the largeVideo.
      */
     LARGE_VIDEO_AVATAR_DISPLAYED: "UI.large_video_avatar_displayed",
-    
+
     /**
      * Toggling room lock
      */
@@ -143,11 +143,6 @@ export default {
      * Display name changed.
      */
     DISPLAY_NAME_CHANGED: "UI.display_name_changed",
-
-    /**
-     * Indicates that the invite url has been initialised.
-     */
-    INVITE_URL_INITIALISED: "UI.invite_url_initialised",
 
     /**
      * Indicates that a password is required for the call.
